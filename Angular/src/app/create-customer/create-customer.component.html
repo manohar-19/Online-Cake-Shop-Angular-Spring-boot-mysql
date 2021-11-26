@@ -1,0 +1,69 @@
+<div class="container-fluid mt-5 bg-light" style="width: 1200px; ">
+    <form action="login.html" method="post" (ngSubmit)="onSubmit()">
+        <img src="../../assets/images/logo.jpg" class="rounded float-right" alt="..." width="150" height="120">
+
+
+        <h3 class="pt-3">Sign Up</h3>
+
+        <p class="pt-2 mb-5 "> Please fill in this form to create your account.</p>
+        <hr>
+
+        <div class="form-group ">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control"  placeholder="Enter name" id="custName"
+             [(ngModel)]="customer.custName" name="custName">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputUserName1">User name</label>
+            <input type="text" class="form-control" id="custUserName" placeholder="Enter user name"
+                [(ngModel)]="customer.custUserName" name="custUserName">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="custPassword" placeholder="Password"
+            [(ngModel)]="customer.custPassword" name="custPassword">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputDOB1">Date Of Birth</label>
+            <input type="date" class="form-control" id="custDob" aria-describedby="nameHelp"
+                placeholder="Enter name"  [(ngModel)]="customer.custDob" name="custDob">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="text" class="form-control" id="custEmail" aria-describedby="emailHelp"
+                placeholder="Enter email"  [(ngModel)]="customer.custEmail" name="custEmail">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                else.</small>
+        </div>
+
+
+        <div class="form-group">
+            <label >Phone</label>
+            <input type="text" class="form-control" id="custPhone" placeholder="Enter phone number" 
+            [(ngModel)]="customer.custPhone" name="custPhone">
+        </div>
+
+        <div class="form-group">
+            <label>Security Question</label>
+            <input type="text" class="form-control" id="custPhone" placeholder="Enter your favorite color"
+                [(ngModel)]="customer.securityQuestion" name="custPhone">
+                <small id="emailHelp" class="form-text text-muted">remember this incase you forget your password</small>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1" >Address</label>
+            <textarea class="form-control" id="custAddress" rows="3" [(ngModel)]="customer.custAddress" placeholder="Enter your Address here" name="custAddress"></textarea>
+        </div>
+       
+        <div class="pb-4 d-flex justify-content-end">
+            <button  type="submit" class="btn btn-primary">Submit</button>
+
+        </div>
+
+    </form>
+
+</div>

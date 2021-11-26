@@ -1,0 +1,43 @@
+
+<br /><br /><br> <br><br>
+
+
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form action="#">
+      <h1>Create Account</h1>
+      <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <span>or use your email for registration</span>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Sign Up</button>
+    </form>
+  </div>
+  <div class="form-container sign-in-container">
+    <form action="#">
+      <h1>Admin Login</h1>
+      <div class="social-container">
+        <img id="userlogo" src="../../assets/images/logo.jpg" />
+      </div>
+
+      <input type="text" placeholder="username" name="username"  [(ngModel)]="model.name" autocomplete="off"/>
+
+      <input type="password" placeholder="password" name="password"  [(ngModel)]="model.password" autocomplete="off"/>
+
+    <div class="mb-2"></div>
+      <button  (click)="loginUser()">Sign In</button>
+      <br> 
+      
+    </form>
+    
+  </div>
+
+  <div class="overlay-container">
+    <img width="400" height="600" src="../../assets/images/loginCake.png">
+  </div>
+</div>

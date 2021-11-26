@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<br><br><br>
+
+<!-- <div class="row d-flex justify-content-around ">
+    <div class="col col-md-3 mb-4 " *ngFor="let prod of product | async" >
+        <a href="#">
+            <div class="card h-90 bg-light   g-col-4 "  >
+                <img src="{{prod.image}}" class="card-img-top" alt="...">
+                <div class="card-body " style="color: black; ">
+                    <h5 class="card-title ">{{prod.prodName}}</h5>
+                    <p class="card-text">Rs {{prod.pricePerkg}} <i class="fab fa-rupee-sign    "></i> </p>
+                    <a >
+                        <button type="button" class="btn btn-primary btn-md mr-1 mb-2" ><i
+                                class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
+                            </a>
+                </div>
+            </div>
+        </a>
+    </div>
+</div> -->
+
+
+<div class="row d-flex justify-content-around ">
+    <div class="col col-md-3 mb-4 " *ngFor="let mod of model | async" >
+        <a (click)="productSelect(mod.prodId)">
+            <div class="card h-90 bg-light   g-col-4 "  >
+                <img src="{{mod.image}}" class="card-img-top" alt="...">
+                
+                <div class="card-body " style="color: black; ">
+                    <h5 class="card-title ">{{mod.prodName}}</h5>
+                   
+
+                    <p class="card-text">Rs {{mod.pricePerkg}} <i class="fab fa-rupee-sign    "></i> </p>
+                   
+                        
+                           
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

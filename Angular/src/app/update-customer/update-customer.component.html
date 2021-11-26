@@ -1,0 +1,82 @@
+<app-header></app-header>
+<br><br>
+<div class="container-fluid mt-5 bg-light" style="width: 1200px; ">
+    <form action="login.html" method="post" (ngSubmit)="onSubmit()">
+        <img src="../../assets/images/logo.jpg" class="rounded float-right" alt="..." width="150" height="120">
+
+
+        <h3 class="pt-3">update customer</h3>
+
+        <p class="pt-2 mb-5 "> Please fill in this form to update your account.</p>
+        <hr>
+
+        <div  *ngFor="let cust of getcustomer | async">
+            <div class="form-group ">
+                <label for="exampleInputEmail1">Name</label>
+                <input type="text" class="form-control" placeholder="{{cust.custName}}" id="custName"
+                    [(ngModel)]="customer.custName" name="custName">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputUserName1">User name</label>
+                <input type="text" class="form-control" id="custUserName" placeholder="{{cust.custUserName}}"
+                    [(ngModel)]="customer.custUserName" name="custUserName">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="text" class="form-control" id="custPassword" placeholder="{{cust.custPassword}}"
+                    [(ngModel)]="customer.custPassword" name="custPassword">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDOB1">Date Of Birth</label>
+                <input type="text" class="form-control" id="custDob" aria-describedby="nameHelp"
+                    placeholder="{{cust.custDob}}" [(ngModel)]="customer.custDob" name="custDob">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="text" class="form-control" id="custEmail" aria-describedby="emailHelp"
+                    placeholder="{{cust.custEmail}}" [(ngModel)]="customer.custEmail" name="custEmail">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+<!-- 
+            <fieldset disabled>
+                <div class="form-group">
+                    <label for="disabledTextInput">City</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Davangere">
+                </div>
+            </fieldset> -->
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" class="form-control" id="custPhone" placeholder="{{cust.custPhone}}"
+                    [(ngModel)]="customer.custPhone" name="custPhone">
+            </div>
+
+            <div class="form-group">
+                <label>Security Question</label>
+                <input type="text" class="form-control" id="custPhone" placeholder="{{cust.securityQuestion}}"
+                    [(ngModel)]="customer.securityQuestion" name="custPhone">
+                    <small id="emailHelp" class="form-text text-muted">enter your favorite color</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Address</label>
+                <textarea class="form-control" id="custAddress" rows="3" [(ngModel)]="customer.custAddress"  placeholder="{{cust.custAddress}}"
+                    name="custAddress"></textarea>
+            </div>
+            
+        </div>
+
+
+        <div class="pb-4 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </div>
+
+    </form>
+
+</div>
+<br>
+
+<app-footer></app-footer>

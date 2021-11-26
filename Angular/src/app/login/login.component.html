@@ -1,0 +1,35 @@
+
+
+<br /><br /><br> <br><br>
+
+
+<div class="container" id="container">
+
+  <div class="form-container sign-in-container">
+    <form action="#">
+      <h1>Login</h1>
+      <div class="social-container">
+        <img id="userlogo" src="../../assets/images/logo.jpg" />
+      </div>
+
+      <input type="text" placeholder="username" name="username"  [(ngModel)]="model.name" autocomplete="off"/>
+
+      <input type="password" placeholder="password" name="password"  [(ngModel)]="model.password" autocomplete="off"/>
+
+    <div class="mb-1"></div>
+      <button  (click)="loginUser()">Sign In</button>
+      <br> 
+      <div id="passwordUpdate">
+        <a href="forgetPassword">Forgot your password?</a>
+        <hr>
+       <h6> <a routerLink="/signup" id="Signup">Create New Account</a></h6>
+      </div>
+    </form>
+    
+  </div>
+
+  <div class="overlay-container">
+    <img width="400" height="600" src="../../assets/images/loginCake.png">
+  </div>
+</div>
+
